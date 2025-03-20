@@ -46,7 +46,7 @@ https://github.com/user-attachments/assets/2e12f313-c57f-4f42-b39d-0d4c7f72d17c
 
 ##  Cosas por Mejorar
 
-A continuación, algunas áreas de mejora detectadas durante el desarrollo:
+A continuación, áreas de mejora detectadas:
 
 ###  Mejora de la Interfaz
 La interfaz actual es funcional, pero puede mejorar estéticamente:
@@ -71,10 +71,13 @@ El backend está diseñado para integrarse fácilmente con bases de datos:
 - Permite migrar el almacenamiento actual en archivo JSON a bases de datos SQL (MySQL, PostgreSQL) o NoSQL (MongoDB).
 - Facilitaría la persistencia de datos y generación de reportes a futuro.
 
+### Despliegue
+- La aplicación podría ser desplegada de manera sencilla usando GitHub pages para realizar una presentación de la misma más sencilla
+- Antes de cualquier intento de despliegue sería necesario medidas de seguridad básicas
 ---
 
 ##  Nota
 Este proyecto fue desarrollado como parte de una **prueba técnica en un solo día de trabajo**. 
 Soy consciente de que hay muchas áreas que se pueden mejorar y optimizar, pero espero haber demostrado una base sólida y clara sobre la que seguir construyendo.
 
-¡Gracias por la oportunidad!
+¡Gracias por la oportunidad! ❤️
