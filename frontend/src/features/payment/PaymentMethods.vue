@@ -36,9 +36,9 @@ const emit = defineEmits<{
 }>()
 
 const methods = ref<PaymentMethod[]>([
-  { id: 1, name: 'Efectivo ', icon: '💵' },
+  { id: 1, name: 'Efectivo', icon: '💵' },
   { id: 2, name: 'Tarjeta', icon: '💳' },
-  { id: 3, name: 'Otros', icon: ' ' }
+  { id: 3, name: 'Otros', icon: '🪙' } // agrega un ícono cualquiera
 ])
 
 function selectMethod(method: PaymentMethod) {

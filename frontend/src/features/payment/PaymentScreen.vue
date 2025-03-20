@@ -3,19 +3,25 @@
     <div class="payment-screen">
       <section class="left-panel">
         <TotalTips :total="totalTips" @update:total="totalTips = $event" />
-        <SplitCalculator :totalTips="totalTips" />
+        <SplitCalculator 
+          :totalTips="totalTips" 
+          @update:numPeople="numPeople = $event"
+        />
         <PaymentMethods
           :selectedMethod="selectedMethod"
           @select="(method) => selectedMethod = method"
         />
       </section>
+
       <section class="center-panel">
         <NumericKeypad @confirm="addPayment" :remainingAmount="remainingAmount" />
       </section>
+
       <section class="right-panel">
         <PaymentsList :payments="payments" @remove="removePayment" />
       </section>
     </div>
+
     <footer class="payment-footer">
       <div class="summary-section">
         <PaymentSummary :payments="payments" :selectedMethod="selectedMethod" :totalTips="totalTips" />
@@ -48,10 +54,10 @@ interface PaymentItem {
   amount: number
 }
 
-const totalTips = ref<number>(100) 
+const totalTips = ref<number>(100)
 const selectedMethod = ref<{ name: string; icon: string } | null>(null)
 const payments = ref<PaymentItem[]>([])
-const numPeople = ref<number>(1) 
+const numPeople = ref<number>(1) // Aquí recibe el número de personas desde SplitCalculator
 
 const totalPaid = computed(() => {
   return payments.value.reduce((acc, payment) => acc + payment.amount, 0)
@@ -62,15 +68,17 @@ const remainingAmount = computed(() => {
 })
 
 function addPayment(amount: number) {
-  if (!selectedMethod.value) {
+  if (!selectedMethod.value || !selectedMethod.value.name) {
     alert('Selecciona un método de pago primero')
     return
   }
+
   payments.value.push({
     method: selectedMethod.value.name,
     icon: selectedMethod.value.icon,
     amount,
   })
+
   selectedMethod.value = null
 }
 

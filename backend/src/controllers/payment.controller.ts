@@ -35,9 +35,9 @@ export const createPayment = (req: Request, res: Response, next: NextFunction): 
       res.send(result);
     });
 
-    doc.fontSize(16).text('Payment Receipt', { align: 'center' });
+    doc.fontSize(16).text('TICKET', { align: 'center' });
     doc.moveDown().fontSize(12).text(`Total: $${totalAmount}`);
-    doc.text(`Date: ${newPayment.createdAt.toLocaleString()}`);
+    doc.text(`Fecha: ${newPayment.createdAt.toLocaleString()}`);
     doc.moveDown().text('Desglose:');
 
     newPayment.breakdown.forEach((b: BreakdownItem) => {

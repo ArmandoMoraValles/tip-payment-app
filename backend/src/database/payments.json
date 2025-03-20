@@ -105,5 +105,133 @@
       }
     ],
     "createdAt": "2025-03-20T15:35:29.800Z"
+  },
+  {
+    "id": "1587fcbb-4efb-4191-81ed-58eae9d7e91c",
+    "totalAmount": 100,
+    "breakdown": [
+      {
+        "method": "Efectivo ",
+        "icon": "💵",
+        "amount": 100
+      }
+    ],
+    "createdAt": "2025-03-20T15:52:02.513Z"
+  },
+  {
+    "id": "008938ca-5b35-448b-9034-eba638e9675c",
+    "totalAmount": 100,
+    "breakdown": [
+      {
+        "method": "Efectivo ",
+        "icon": "💵",
+        "amount": 100
+      }
+    ],
+    "createdAt": "2025-03-20T15:55:33.757Z"
+  },
+  {
+    "id": "a7e8b012-d3eb-469a-9492-4cb7d958d567",
+    "totalAmount": 50,
+    "breakdown": [
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 50
+      }
+    ],
+    "createdAt": "2025-03-20T16:02:55.854Z"
+  },
+  {
+    "id": "432be98d-ef4c-43d3-8846-5bfe32a75dfe",
+    "totalAmount": 100,
+    "breakdown": [
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 100
+      }
+    ],
+    "createdAt": "2025-03-20T16:06:33.262Z"
+  },
+  {
+    "id": "8273621e-9b77-4a7d-9e29-846a5b3a2420",
+    "totalAmount": 50,
+    "breakdown": [
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 0
+      },
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 50
+      }
+    ],
+    "createdAt": "2025-03-20T16:06:43.557Z"
+  },
+  {
+    "id": "cfe1d2d1-79b2-4545-8fd1-eebc74359611",
+    "totalAmount": 100,
+    "breakdown": [
+      {
+        "method": "Tarjeta",
+        "icon": "💳",
+        "amount": 100
+      },
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 0
+      }
+    ],
+    "createdAt": "2025-03-20T16:07:40.097Z"
+  },
+  {
+    "id": "3edf5f3d-74c9-4eaa-afc7-f57ef1c3e5b5",
+    "totalAmount": 100,
+    "breakdown": [
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 100
+      }
+    ],
+    "createdAt": "2025-03-20T16:08:36.253Z"
+  },
+  {
+    "id": "f30bc036-6483-4a3d-becb-1fd76247baec",
+    "totalAmount": 100,
+    "breakdown": [
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 50
+      },
+      {
+        "method": "Otros",
+        "icon": "🪙",
+        "amount": 50
+      }
+    ],
+    "createdAt": "2025-03-20T16:08:51.092Z"
+  },
+  {
+    "id": "5c20bc99-148a-4b76-a0a2-1be3f1566fe5",
+    "totalAmount": 100,
+    "breakdown": [
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 100
+      },
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 0
+      }
+    ],
+    "createdAt": "2025-03-20T16:09:07.897Z"
   }
 ]

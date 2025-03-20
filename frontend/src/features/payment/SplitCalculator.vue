@@ -16,14 +16,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch, defineEmits, defineProps } from 'vue'
 
 const props = defineProps<{ totalTips: number }>()
-const numberOfPeople = ref<number>(0)
+const emit = defineEmits(['update:numPeople'])
+
+const numberOfPeople = ref<number>(1) // Valor por defecto en 1
 
 const amountPerPerson = computed(() =>
-  numberOfPeople.value > 0 ? (props.totalTips / numberOfPeople.value).toFixed(2) : '0.00'
+  numberOfPeople.value > 0
+    ? (props.totalTips / numberOfPeople.value).toFixed(2)
+    : '0.00'
 )
+
+watch(numberOfPeople, () => {
+  emit('update:numPeople', numberOfPeople.value)
+})
 </script>
 
 <style scoped>
