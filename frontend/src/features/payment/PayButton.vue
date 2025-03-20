@@ -40,11 +40,10 @@ async function payAmount() {
         breakdown: props.payments
       },
       {
-        responseType: 'blob' // Recibimos un PDF
+        responseType: 'blob'
       }
     )
 
-    // Descargar el PDF
     const url = window.URL.createObjectURL(new Blob([response.data]))
     const link = document.createElement('a')
     link.href = url

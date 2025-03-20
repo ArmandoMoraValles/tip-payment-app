@@ -30,27 +30,21 @@ const remainingAmount = computed(() => {
 })
 </script>
 
-<<style scoped>
-.payment-summary {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-
+<style scoped>
 .payment-info {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 .payment-info div {
   font-size: 1.3rem;
   color: #333;
+  margin: 0;
+}
+
+.payment-info p {
+  margin: 0;
 }
 
 .amount {
@@ -62,16 +56,7 @@ const remainingAmount = computed(() => {
 .payment-info .remaining p:first-child {
   font-weight: bold;
   font-size: 1.5rem;
-  margin: 0;
 }
 
-.payment-info .total-paid,
-.payment-info .remaining {
-  width: 100%;
-}
-
-.payment-info .remaining {
-  text-align: left;
-}
 </style>
 

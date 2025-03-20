@@ -2,7 +2,7 @@
   <div class="numeric-keypad">
     <div class="display">
       <span>$</span> {{ formattedAmount }}
-      <button class="clear-btn" @click="clear">✖</button>
+      <button class="backspace-btn" @click="backspace">⬅️</button>
     </div>
 
     <div class="divider"></div>
@@ -43,14 +43,14 @@ function append(value: string) {
   amount.value += value
 }
 
-function clear() {
-  amount.value = ''
+function backspace() {
+  amount.value = amount.value.slice(0, -1)
 }
 
 function confirm() {
   if (amount.value) {
     emit('confirm', Number(amount.value))
-    clear()
+    amount.value = ''
   }
 }
 </script>
@@ -72,14 +72,14 @@ function confirm() {
   position: relative;
 }
 
-.clear-btn {
+.backspace-btn {
   position: absolute;
   right: 10px;
   top: 15px;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .divider {
@@ -100,14 +100,28 @@ function confirm() {
   border-radius: 12px;
   border: 1px solid #ccc;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .keypad .confirm {
   background-color: #f56a5d;
   color: #fff;
-  border-radius: 50%;
+  border-radius: 20%;
+  font-size: 1.8rem;
   width: 60px;
   height: 60px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keypad .confirm:hover {
+  background-color: #f7796a;
 }
 
 .remaining {

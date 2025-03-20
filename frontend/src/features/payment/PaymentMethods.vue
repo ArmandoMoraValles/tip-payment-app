@@ -27,19 +27,16 @@ interface PaymentMethod {
   icon: string
 }
 
-// ✅ Recibe el método seleccionado desde el padre
 defineProps<{
   selectedMethod: PaymentMethod | null
 }>()
 
-// ✅ Emite cuando seleccionas uno nuevo
 const emit = defineEmits<{
   (e: 'select', method: PaymentMethod): void
 }>()
 
-// Lista de métodos fija por ahora
 const methods = ref<PaymentMethod[]>([
-  { id: 1, name: 'Efectivo', icon: '💵' },
+  { id: 1, name: 'Efectivo ', icon: '💵' },
   { id: 2, name: 'Tarjeta', icon: '💳' },
   { id: 3, name: 'Otros', icon: ' ' }
 ])
