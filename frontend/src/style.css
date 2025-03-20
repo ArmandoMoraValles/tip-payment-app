@@ -1,3 +1,8 @@
+:root {
+  --color-primary: #ED6A5A;
+  --color-secondary: #FDDEDD;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 25px;

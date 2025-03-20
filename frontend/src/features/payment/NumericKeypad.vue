@@ -106,7 +106,7 @@ function confirm() {
 }
 
 .keypad .confirm {
-  background-color: #f56a5d;
+  background-color: var(--color-primary);
   color: #fff;
   border-radius: 20%;
   font-size: 1.8rem;
@@ -121,12 +121,12 @@ function confirm() {
 }
 
 .keypad .confirm:hover {
-  background-color: #f7796a;
+  background-color: var(--color-primary);
 }
 
 .remaining {
   background-color: #fff;
-  border: 1px solid #f56a5d;
+  border: 1px solid var(--color-primary);
   border-radius: 30px;
   padding: 10px;
   text-align: center;

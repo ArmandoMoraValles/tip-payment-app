@@ -17,19 +17,17 @@ const props = defineProps<{
 }>()
 
 async function payAmount() {
-  if (!props.totalAmount || props.totalAmount <= 0) {
-    alert('El total a pagar es inválido o no se ha especificado.')
-    return
-  }
-
   if (!props.payments || props.payments.length === 0) {
     alert('No hay métodos de pago registrados.')
     return
   }
 
-  if (!props.totalTips || props.totalTips <= 0) {
-    alert('El total de propinas es inválido o no se ha especificado.')
-    return
+  const totalPagado = props.payments.reduce((acc, p) => acc + p.amount, 0)
+
+  if (totalPagado < props.totalTips) {
+    alert(`El total pagado ($${totalPagado}) es menor que el total de propinas ($${props.totalTips}).`)
+  } else if (totalPagado > props.totalTips) {
+    alert(`El total pagado ($${totalPagado}) excede el total de propinas ($${props.totalTips}).`)
   }
 
   try {
@@ -68,7 +66,7 @@ async function payAmount() {
 }
 
 .pay-btn {
-  background-color: #f56a5d;
+  background-color: var(--color-primary);
   color: white;
   padding: 20px 40px;
   border-radius: 30px;

@@ -64,7 +64,7 @@ input::placeholder {
 }
 
 .per-person {
-  color: #e57373;
+  color: var(--color-primary);
   font-weight: bold;
 }
 </style>
