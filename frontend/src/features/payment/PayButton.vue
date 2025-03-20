@@ -18,8 +18,6 @@ const props = defineProps<{
 }>()
 
 async function payAmount() {
-  console.log(props.payments)
-  console.log(props.numPeople)
   if (props.payments.length !== props.numPeople) {
     alert('El número de pagos debe coincidir con el número de personas en que se divide la propina.');
     return;
