@@ -1,7 +1,6 @@
 <template>
   <section class="split-calculator">
     <label class="title">¿Entre cuántos quieres dividir las Propinas?</label>
-
     <div class="input-result">
       <input
         type="number"
@@ -20,13 +19,10 @@
 import { ref, computed } from 'vue'
 
 const props = defineProps<{ totalTips: number }>()
-
 const numberOfPeople = ref<number>(0)
 
 const amountPerPerson = computed(() =>
-  numberOfPeople.value > 0
-    ? (props.totalTips / numberOfPeople.value).toFixed(2)
-    : '0.00'
+  numberOfPeople.value > 0 ? (props.totalTips / numberOfPeople.value).toFixed(2) : '0.00'
 )
 </script>
 

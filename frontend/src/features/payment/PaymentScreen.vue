@@ -9,32 +9,27 @@
           @select="(method) => selectedMethod = method"
         />
       </section>
-
       <section class="center-panel">
-        <NumericKeypad 
-          @confirm="addPayment"
-          :remainingAmount="remainingAmount"
-        />
+        <NumericKeypad @confirm="addPayment" :remainingAmount="remainingAmount" />
       </section>
-
       <section class="right-panel">
         <PaymentsList :payments="payments" @remove="removePayment" />
       </section>
     </div>
-
     <footer class="payment-footer">
       <div class="summary-section">
         <PaymentSummary :payments="payments" :selectedMethod="selectedMethod" :totalTips="totalTips" />
       </div>
       <div class="pay-button-section">
-      <PayButton 
-        :totalAmount="totalPaid"
-        :payments="payments"
-        :totalTips="totalTips"
-      />
+        <PayButton 
+          :totalAmount="totalPaid"
+          :payments="payments"
+          :totalTips="totalTips"
+          :numPeople="numPeople"
+        />
       </div>
     </footer>
-</div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -53,9 +48,10 @@ interface PaymentItem {
   amount: number
 }
 
-const totalTips = ref<number>(0)
+const totalTips = ref<number>(100) 
 const selectedMethod = ref<{ name: string; icon: string } | null>(null)
 const payments = ref<PaymentItem[]>([])
+const numPeople = ref<number>(1) 
 
 const totalPaid = computed(() => {
   return payments.value.reduce((acc, payment) => acc + payment.amount, 0)
@@ -70,13 +66,11 @@ function addPayment(amount: number) {
     alert('Selecciona un método de pago primero')
     return
   }
-
   payments.value.push({
     method: selectedMethod.value.name,
     icon: selectedMethod.value.icon,
     amount,
   })
-
   selectedMethod.value = null
 }
 

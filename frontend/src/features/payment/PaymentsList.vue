@@ -1,9 +1,7 @@
 <template>
   <section class="payments-list">
     <p class="title">Pagos</p>
-
     <div v-if="payments.length === 0" class="no-payments">Sin Pagos</div>
-
     <ul v-else>
       <li v-for="(payment, index) in payments" :key="index">
         <div class="payment-info">
@@ -66,7 +64,7 @@ li {
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
-  border: 1px solid #cac4c4; 
+  border: 1px solid #cac4c4;
   border-radius: 3%;
 }
 
