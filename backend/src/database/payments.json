@@ -1,0 +1,68 @@
+[
+  {
+    "id": "fa9c41fd-f5ad-4e14-8e3e-bbbabf2838a6",
+    "totalAmount": 1500,
+    "breakdown": [
+      {
+        "employee": "Juan Pérez",
+        "amount": 500,
+        "method": "Efectivo"
+      },
+      {
+        "employee": "Ana López",
+        "amount": 1000,
+        "method": "Tarjeta BBVA 1234"
+      }
+    ],
+    "createdAt": "2025-03-20T13:48:26.429Z"
+  },
+  {
+    "id": "b4041a6e-6446-4091-b795-bc1a17bc44e2",
+    "totalAmount": 100,
+    "breakdown": [
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 50
+      },
+      {
+        "method": "Tarjeta",
+        "icon": "💳",
+        "amount": 50
+      }
+    ],
+    "createdAt": "2025-03-20T13:57:59.839Z"
+  },
+  {
+    "id": "1cdc8153-791e-4a8b-b482-4fc83aed1d42",
+    "totalAmount": 100,
+    "breakdown": [
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 20
+      },
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 20
+      },
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 20
+      },
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 20
+      },
+      {
+        "method": "Efectivo",
+        "icon": "💵",
+        "amount": 20
+      }
+    ],
+    "createdAt": "2025-03-20T14:01:16.641Z"
+  }
+]
