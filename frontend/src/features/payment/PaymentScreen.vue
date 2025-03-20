@@ -1,6 +1,5 @@
 <template>
   <div class="payment-screen">
-    <!-- 1. Columna izquierda -->
     <section class="left-panel">
       <TotalTips :total="totalTips" @update:total="totalTips = $event" />
       <SplitCalculator :totalTips="totalTips" />
@@ -10,7 +9,6 @@
       />
     </section>
 
-    <!-- 2. Centro: Teclado -->
     <section class="center-panel">
       <NumericKeypad 
         @confirm="addPayment"
@@ -18,19 +16,21 @@
       />
     </section>
 
-    <!-- 3. Derecha: Lista de pagos -->
     <section class="right-panel">
       <PaymentsList :payments="payments" @remove="removePayment" />
     </section>
   </div>
 
-  <!-- Footer con el resumen de pagos y el botón de pago -->
   <footer class="payment-footer">
     <div class="summary-section">
       <PaymentSummary :payments="payments" :selectedMethod="selectedMethod" :totalTips="totalTips" />
     </div>
     <div class="pay-button-section">
-      <PayButton :totalAmount="totalPaid" />
+    <PayButton 
+      :totalAmount="totalPaid"
+      :payments="payments"
+      :totalTips="totalTips"
+    />
     </div>
   </footer>
 </template>
