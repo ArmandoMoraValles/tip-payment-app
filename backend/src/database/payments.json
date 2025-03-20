@@ -64,5 +64,46 @@
       }
     ],
     "createdAt": "2025-03-20T14:01:16.641Z"
+  },
+  {
+    "id": "3db3cc1a-2ee9-4154-b781-c34ea6981f50",
+    "totalAmount": 600,
+    "breakdown": [
+      {
+        "method": "Efectivo ",
+        "icon": "💵",
+        "amount": 100
+      },
+      {
+        "method": "Tarjeta",
+        "icon": "💳",
+        "amount": 500
+      }
+    ],
+    "createdAt": "2025-03-20T15:32:35.517Z"
+  },
+  {
+    "id": "fb45c1c2-8a7f-438d-aec6-2e041b34f3a1",
+    "totalAmount": 100,
+    "breakdown": [
+      {
+        "method": "Efectivo ",
+        "icon": "💵",
+        "amount": 100
+      }
+    ],
+    "createdAt": "2025-03-20T15:33:52.191Z"
+  },
+  {
+    "id": "9350756f-0f82-4778-a9e5-8001d1cf0073",
+    "totalAmount": 100,
+    "breakdown": [
+      {
+        "method": "Efectivo ",
+        "icon": "💵",
+        "amount": 100
+      }
+    ],
+    "createdAt": "2025-03-20T15:35:29.800Z"
   }
 ]

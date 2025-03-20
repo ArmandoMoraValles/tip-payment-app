@@ -11,23 +11,21 @@ import { defineProps } from 'vue'
 import axios from 'axios'
 
 const props = defineProps<{
-  totalAmount: number
-  payments: { method: string, icon: string, amount: number }[]
-  totalTips: number
+  totalAmount: number;
+  payments: { method: string, icon: string, amount: number }[];
+  totalTips: number;
+  numPeople: number;
 }>()
 
 async function payAmount() {
-  if (!props.payments || props.payments.length === 0) {
-    alert('No hay métodos de pago registrados.')
-    return
+  if (props.payments.length !== props.numPeople) {
+    alert('El número de pagos debe coincidir con el número de personas en que se divide la propina.');
+    return;
   }
 
-  const totalPagado = props.payments.reduce((acc, p) => acc + p.amount, 0)
-
-  if (totalPagado < props.totalTips) {
-    alert(`El total pagado ($${totalPagado}) es menor que el total de propinas ($${props.totalTips}).`)
-  } else if (totalPagado > props.totalTips) {
-    alert(`El total pagado ($${totalPagado}) excede el total de propinas ($${props.totalTips}).`)
+  if (!props.payments || props.payments.length === 0) {
+    alert('No hay métodos de pago registrados.');
+    return;
   }
 
   try {
@@ -41,7 +39,6 @@ async function payAmount() {
         responseType: 'blob'
       }
     )
-
     const url = window.URL.createObjectURL(new Blob([response.data]))
     const link = document.createElement('a')
     link.href = url
@@ -49,10 +46,9 @@ async function payAmount() {
     document.body.appendChild(link)
     link.click()
     link.remove()
-
-    console.log('✅ Pago registrado y PDF descargado')
+    window.location.reload();
   } catch (error) {
-    console.error('❌ Error al realizar el pago:', error)
+    console.error('Error al realizar el pago:', error)
     alert('Ocurrió un error al procesar el pago.')
   }
 }
