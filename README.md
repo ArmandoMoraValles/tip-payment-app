@@ -39,12 +39,12 @@ Tanto el backend (Express, TypeScript, etc.) como el frontend (Vite, Vue.js) se 
    ```bash
    npm run dev
    ```
-4. Abre la URL que se muestre en la terminal (generalmente `http://localhost:5173`) en tu navegador.
+4. Abre la URL que se muestre en la terminal (generalmente `http://localhost:5173`) en el navegador.
 
 ## Video con el funcionamiento
 https://github.com/user-attachments/assets/2e12f313-c57f-4f42-b39d-0d4c7f72d17c
 
-## 🛠️ Cosas por Mejorar
+##  Cosas por Mejorar
 
 A continuación, algunas áreas de mejora detectadas durante el desarrollo:
 
@@ -73,7 +73,7 @@ El backend está diseñado para integrarse fácilmente con bases de datos:
 
 ---
 
-##  Nota Final
+##  Nota
 Este proyecto fue desarrollado como parte de una **prueba técnica en un solo día de trabajo**. 
 Soy consciente de que hay muchas áreas que se pueden mejorar y optimizar, pero espero haber demostrado una base sólida y clara sobre la que seguir construyendo.
 
