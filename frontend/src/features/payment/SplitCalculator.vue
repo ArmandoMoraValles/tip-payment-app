@@ -21,7 +21,7 @@ import { ref, computed, watch, defineEmits, defineProps } from 'vue'
 const props = defineProps<{ totalTips: number }>()
 const emit = defineEmits(['update:numPeople'])
 
-const numberOfPeople = ref<number>(1) // Valor por defecto en 1
+const numberOfPeople = ref<number>(1)
 
 const amountPerPerson = computed(() =>
   numberOfPeople.value > 0

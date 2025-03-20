@@ -57,7 +57,7 @@ interface PaymentItem {
 const totalTips = ref<number>(100)
 const selectedMethod = ref<{ name: string; icon: string } | null>(null)
 const payments = ref<PaymentItem[]>([])
-const numPeople = ref<number>(1) // Aquí recibe el número de personas desde SplitCalculator
+const numPeople = ref<number>(1)
 
 const totalPaid = computed(() => {
   return payments.value.reduce((acc, payment) => acc + payment.amount, 0)
