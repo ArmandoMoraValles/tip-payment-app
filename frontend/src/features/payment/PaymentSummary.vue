@@ -49,7 +49,7 @@ const remainingAmount = computed(() => {
 
 .amount {
   font-size: 1.8rem;
-  color: #f56a5d;
+  color: var(--color-primary);
 }
 
 .payment-info .total-paid p:first-child,
