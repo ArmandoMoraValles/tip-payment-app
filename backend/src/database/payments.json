@@ -64,5 +64,17 @@
       }
     ],
     "createdAt": "2025-03-20T14:01:16.641Z"
+  },
+  {
+    "id": "74912bb0-4e55-451c-83ae-9a695c2fc642",
+    "totalAmount": 50,
+    "breakdown": [
+      {
+        "method": "Efectivo ",
+        "icon": "💵",
+        "amount": 50
+      }
+    ],
+    "createdAt": "2025-03-20T14:55:23.763Z"
   }
 ]
