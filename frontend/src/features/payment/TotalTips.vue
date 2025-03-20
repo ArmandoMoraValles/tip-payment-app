@@ -24,12 +24,10 @@ const emit = defineEmits(['update:total'])
 const editMode = ref(false)
 const editableTips = ref(formatNumber(props.total))
 
-// Actualiza el input si cambia el prop
 watch(() => props.total, () => {
   editableTips.value = formatNumber(props.total)
 })
 
-// Formatea el número con comas
 function formatNumber(num: number): string {
   return num.toLocaleString('en-US')
 }
@@ -40,7 +38,6 @@ function saveNewTotal() {
     emit('update:total', parsed)
     editableTips.value = formatNumber(parsed)
   } else {
-    // Si no es número, regresa al valor anterior
     editableTips.value = formatNumber(props.total)
   }
   editMode.value = false

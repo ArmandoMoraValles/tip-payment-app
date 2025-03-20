@@ -1,38 +1,40 @@
 <template>
-  <div class="payment-screen">
-    <section class="left-panel">
-      <TotalTips :total="totalTips" @update:total="totalTips = $event" />
-      <SplitCalculator :totalTips="totalTips" />
-      <PaymentMethods
-        :selectedMethod="selectedMethod"
-        @select="(method) => selectedMethod = method"
-      />
-    </section>
+  <div class="payment-container">
+    <div class="payment-screen">
+      <section class="left-panel">
+        <TotalTips :total="totalTips" @update:total="totalTips = $event" />
+        <SplitCalculator :totalTips="totalTips" />
+        <PaymentMethods
+          :selectedMethod="selectedMethod"
+          @select="(method) => selectedMethod = method"
+        />
+      </section>
 
-    <section class="center-panel">
-      <NumericKeypad 
-        @confirm="addPayment"
-        :remainingAmount="remainingAmount"
-      />
-    </section>
+      <section class="center-panel">
+        <NumericKeypad 
+          @confirm="addPayment"
+          :remainingAmount="remainingAmount"
+        />
+      </section>
 
-    <section class="right-panel">
-      <PaymentsList :payments="payments" @remove="removePayment" />
-    </section>
-  </div>
-
-  <footer class="payment-footer">
-    <div class="summary-section">
-      <PaymentSummary :payments="payments" :selectedMethod="selectedMethod" :totalTips="totalTips" />
+      <section class="right-panel">
+        <PaymentsList :payments="payments" @remove="removePayment" />
+      </section>
     </div>
-    <div class="pay-button-section">
-    <PayButton 
-      :totalAmount="totalPaid"
-      :payments="payments"
-      :totalTips="totalTips"
-    />
-    </div>
-  </footer>
+
+    <footer class="payment-footer">
+      <div class="summary-section">
+        <PaymentSummary :payments="payments" :selectedMethod="selectedMethod" :totalTips="totalTips" />
+      </div>
+      <div class="pay-button-section">
+      <PayButton 
+        :totalAmount="totalPaid"
+        :payments="payments"
+        :totalTips="totalTips"
+      />
+      </div>
+    </footer>
+</div>
 </template>
 
 <script setup lang="ts">
@@ -51,7 +53,7 @@ interface PaymentItem {
   amount: number
 }
 
-const totalTips = ref<number>(1828)
+const totalTips = ref<number>(0)
 const selectedMethod = ref<{ name: string; icon: string } | null>(null)
 const payments = ref<PaymentItem[]>([])
 
@@ -95,7 +97,6 @@ function removePayment(index: number) {
   box-sizing: border-box;
 }
 
-/* Secciones */
 .left-panel, .center-panel, .right-panel {
   display: flex;
   flex-direction: column;
@@ -114,7 +115,6 @@ function removePayment(index: number) {
   padding: 20px;
 }
 
-/* Footer */
 .payment-footer {
   display: flex;
   justify-content: space-between;
@@ -135,5 +135,15 @@ function removePayment(index: number) {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.payment-container {
+  border: 4px solid #adacac;
+  border-radius: 16px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 1300px;
+  margin: 0 auto;
 }
 </style>

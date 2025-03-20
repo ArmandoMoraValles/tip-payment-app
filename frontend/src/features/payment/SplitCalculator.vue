@@ -10,7 +10,7 @@
         placeholder="#"
       />
       <span class="per-person">
-        ${{ amountPerPerson }} x Persona
+        ${{ amountPerPerson }} por Persona
       </span>
     </div>
   </section>

@@ -1,7 +1,9 @@
 body {
   font-family: 'Inter', sans-serif;
-  font-size: 18px; /* Subes el tamaño base */
+  font-size: 25px;
   color: #333;
+  background-color: #fafafa;
+  line-height: 1.5;
 }
 
 button, input {
@@ -12,10 +14,6 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-input[type='number'] {
-  -moz-appearance: textfield;
 }
 
 .payment-screen {
@@ -29,4 +27,30 @@ input[type='number'] {
   box-sizing: border-box;
   align-items: stretch;
   height: 100%; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .payment-screen {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-footer {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+  }
 }

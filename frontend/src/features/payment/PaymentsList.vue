@@ -60,13 +60,14 @@ ul {
 
 li {
   background: #fff;
-  border-radius: 12px;
   padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
+  border: 1px solid #cac4c4; 
+  border-radius: 3%;
 }
 
 .payment-info {
